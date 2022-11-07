@@ -22,6 +22,7 @@
     "nightwatch": "^2.4.2"
   },
   "dependencies": {
+    "nightwatch-allure": "^1.2.0",
     "proxy-agent": "^5.0.0"
   }
 }
