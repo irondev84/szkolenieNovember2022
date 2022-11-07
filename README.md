@@ -1,0 +1,1 @@
+# szkolenieNovember2022
