@@ -20,5 +20,8 @@
   "devDependencies": {
     "chromedriver": "^107.0.3",
     "nightwatch": "^2.4.2"
+  },
+  "dependencies": {
+    "proxy-agent": "^5.0.0"
   }
 }

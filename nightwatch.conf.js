@@ -180,15 +180,18 @@ module.exports = {
     //////////////////////////////////////////////////////////////////////////////////
     saucelabs: {
       selenium: {
-        host: 'ondemand.saucelabs.com',
+        host: 'ondemand.eu-central-1.saucelabs.com',
         port: 443
       },
+      use_ssl: true,
+      username: process.env.SAUCE_USERNAME || '',
+      accessKey: process.env.SAUCE_ACCESS_KEY || '',
+      proxy: process.env.PROXY_URL || '',
       // More info on configuring capabilities can be found on:
       // https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options
       desiredCapabilities: {
         'sauce:options': {
-          username: '${SAUCE_USERNAME}',
-          accessKey: '${SAUCE_ACCESS_KEY}',
+          
           screenResolution: '1280x1024'
           // https://docs.saucelabs.com/dev/cli/sauce-connect-proxy/#--region
           // region: 'us-west-1'
