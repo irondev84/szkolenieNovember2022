@@ -209,7 +209,71 @@ module.exports = {
         start_process: false
       }
     },
+
+    'saucelabs.android-real': {
+      extends: 'saucelabs',
+      desiredCapabilities: {
+        platformName: 'Android',
+        browserName: 'Chrome',
+        'appium:deviceName': 'Google Pixel 6',
+        'appium:platformVersion': '13',
+        'appium:automationName': 'UiAutomator2',
+        'sauce:options': {
+            build: "BUILD ANDROID REAL",
+            name: "Example test on Android Real Device",
+        }
+      },
+    },
+
+    'saucelabs.android-emu': {
+      extends: 'saucelabs',
+      desiredCapabilities: {
+        platformName: 'Android',
+        browserName: 'Chrome',
+        'appium:deviceName': 'Android GoogleAPI Emulator',
+        'appium:platformVersion': '12.0',
+        'appium:automationName': 'UiAutomator2',
+        'sauce:options': {
+            appiumVersion: '1.22.1',
+            build: "BUILD ANDROID EMULATOR",
+            name: "Example test on Android Emulator",
+        }
+      },
+    },
     
+    
+    'saucelabs.iphone-emu': {
+      extends: 'saucelabs',
+      desiredCapabilities: {
+        platformName: 'iOS',
+        browserName: 'Safari',
+        'appium:deviceName': 'iPhone Simulator',
+        'appium:platformVersion': '16.0',
+        'appium:automationName': 'XCUITest',
+        'sauce:options': {
+            appiumVersion: '2.0.0-beta44',
+            build: "Build ID - test",
+            name: "Name - test",
+          }
+        }
+    },
+
+    'saucelabs.iphone-real': {
+      extends: 'saucelabs',
+      desiredCapabilities: {
+        platformName: 'iOS',
+        browserName: 'Safari',
+        'appium:deviceName': 'iPhone 12 Pro',
+        'appium:platformVersion': '14',
+        'appium:automationName': 'XCUITest',
+        'sauce:options': {
+            build: "IPHONE REAL DEVICE TEST",
+            name: "IPHONE REAL DEVICE TEST SCENARIO",
+          }
+        }
+    },
+
+
     'saucelabs.chrome': {
       extends: 'saucelabs',
       desiredCapabilities: {
